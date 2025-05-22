@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://th.bing.com/th/id/OIP.ANiIaXqbGdHY1EfYJUvnuAHaHa?rs=1&amp;pid=ImgDetMain">
+        <title>SKILLUP</title>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <style>
+             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+            /* design de header */
+            html {
+                scroll-behavior: smooth;
+            }
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /*La width et la height incluent le padding et la bordure.*/
+            text-decoration: none; /*supprimer les trées sous les liens*/
+            font-family: poppins;
+           }
+           header{
+            background-color: #3a32a8; /*#060270*/
+            height: 70px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px black;
+           }
+           .nv .nav-logo{ 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-left: 50px;
+            
+           }
+           
+           
+           .nv .nav-logo .titre{
+            color: white;
+            font-size: 20px;
+            /* ici */
+            
+           
+           }
+           
+           .nv{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                padding-top: 10px;
+           }
+           .nv .nav-classes{
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            margin-right: 25px;
+            
+            
+           }
+           .nv .nav-classes .nav-link{
+            margin-right: 15px;
+            color: white;
+            padding: 12px 20px;
+            font-size: 20px;
+            
+            transition: 0.3s ease;
+            border-radius: 40px;
+           }
+           .nv .nav-classes .nav-link:hover{
+            color: black;
+            background-color: #473CBD;
+            
+           }
+
+           ol{
+            list-style: none;
+           }
+           .nv .nav-logo .logo{
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+           }
+           /* design de home page */
+           *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: poppins;
+        }
+        .heroing{
+            border-radius: 50%;
+            height: 450px;
+            width: 530px;
+            margin-left: -50px; 
+        }
+        .hero{
+            background-color: #3a32a8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5rem 2rem;
+        }
+        .hero-sub {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 600px;
+            gap: 0.8rem;
+        }
+        .name{
+            font-size: 2rem;
+            color: aliceblue;
+            padding-left: 4rem;
+            margin-bottom: 0.5rem; 
+        }
+        .project1, .project2 {
+            font-size: 15px;
+            color: aliceblue;
+            font-style: normal;
+            padding-left: 4rem;
+            line-height: 1.6; 
+        }
+        .title1 {
+            font-size: 30px;
+            color: #f0f8ff;
+            font-style: normal;
+            padding-left: 4rem;
+            margin: 0.5rem 0; 
+        }
+        .title20{
+            color: darkgoldenrod;
+            font-size: 70px;
+            font-style: normal;
+            padding-left: 4rem;
+            margin: 0.5rem 0; 
+        }
+        .herobotons{
+            display: flex;
+            gap: 1rem;
+            padding-top: 30px; 
+            padding-left: 4rem;
+            width: 100%;
+            justify-content: flex-start;
+            margin-top: 1rem; 
+        }
+        .contact{
+            background-color: darkgoldenrod;
+            color: aliceblue;
+            border-radius: 24px;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0 , 1);
+        }
+        .inscr{
+            background-color: darkgray;
+            color: #f0f8ff;
+            border-radius: 24px;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0 , 1);
+            backdrop-filter: blur(4px);
+        }
+            /* design de certications */
+            .tre {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 30px;
+                color: #3a32a8;
+            }
+            
+            .swiper {
+                width: 100%;
+                max-width: 800px;
+                height: 400px;
+                margin: 0 auto;
+            }
+            
+            .swiper-slide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            
+            .swiper-slide img {
+                border-radius: 50%;
+                height: 180px;
+                width: 180px;
+                object-fit: cover;
+                margin-bottom: 20px;
+                border: 3px solid #fff;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            
+            .swiper-slide h3 {
+                margin: 10px 0;
+                color: #333;
+            }
+            
+            .swiper-slide p {
+                color: #666;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            .swiper-pagination {
+                position: relative;
+                margin-top: 20px;
+            }
+            
+            .swiper-button-next, 
+            .swiper-button-prev {
+                color: #333;
+                background: rgba(255,255,255,0.5);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 20px;
+            }
+            /* design de formations */
+            .navbar {
+                background: #1e90ff;
+                padding: 0.75rem 1rem;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+      
+            .navbar ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                gap: 2rem;
+            }
+      
+            .navbar ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: color 0.3s;
+                cursor: pointer;
+            }
+      
+            .navbar ul li a:hover,
+            .navbar ul li a:focus {
+                color: #ff6f61;
+                outline: none;
+            }
+      
+            .page-section {
+                padding: 2rem;
+            }
+      
+            /* .heross {
+                background: #1e90ff;
+                color: white;
+                padding: 3rem;
+                text-align: center;
+            } */
+      
+            .btn {
+                background: #ff6f61;
+                color: white;
+                padding: 0.7rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background 0.3s;
+                display: inline-block;
+                margin-top: 1rem;
+            }
+      
+            .btn:hover {
+                background: #ff4c3b;
+            }
+      
+            .features {
+            
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 2rem;
+                gap: 1rem;
+            }
+      
+            .feature {
+            
+                background:#d1cbcb;
+                padding: 2rem;
+                border-radius: 20px;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                width: 200px;
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
+                transition: transform 0.3s;
+            }
+      
+            .feature:hover {
+                transform: scale(1.05);
+            }
+      
+            .review-slider {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 1rem;
+                padding: 1rem;
+                background: #3a32a8;
+                margin: 1rem 2rem;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                animation: scrollReviews 20s linear infinite;
+            }
+      
+            .review {
+                /* box-shadow: 0 10px 10px black; */
+                min-width: 300px;
+                background: #f0f4f8;
+                padding: 1.5rem;
+                border-radius: 10px;
+                scroll-snap-align: center;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                font-style: italic;
+                flex: 0 0 auto;
+            }
+      
+          @keyframes scrollReviews {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+      
+          .course-detail {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+          }
+      
+          .price-offer {
+            font-weight: bold;
+            color: #e53935;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            text-align: center;
+          }
+      
+          
+          .page-section{
+            background-color: #3a32a8;
+            
+          }
+          .marketing-image{
+            border-radius: 50%;
+            width: 400px;
+            height: 300px;
+          }
+          .tri{
+            font-size: 30px;
+            padding-bottom: 20px;
+          }
+          .ecommerce-image{
+            border-radius: 50%;
+            width: 400px;
+            height: 300px;
+          }
+          .desc{
+            font-size: 15px;
+            padding-bottom: 20px;
+          }
+          .appdev-image{
+            border-radius: 50%;
+            width: 400px;
+            height: 300px;
+          }
+          .design-image{
+            border-radius: 50%;
+            width: 400px;
+            height: 300px;
+          }
+          .webdev-image{
+            border-radius: 50%;
+            width: 400px;
+            height: 300px;
+          }
+          .page-section h1{
+            font-size: 50px;
+            color: white;
+          }
+          /* design de INSCRIPTION PAGE */
+          .form{
+                position: relative; /*rest dans la position normale*/ 
+                background-color: white;
+                max-width: 430px;
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 0 5px 5px black;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .form .formulaire{
+                padding: 30px; 
+                
+            }
+            .form .formulaire .title{
+                position: relative;
+                font-size: 35px;
+                color: #3a32a8;
+                font-weight: 600;
+                margin-left: 20px;
+            }
+
+            .formulaire .input1{
+                position: relative;   /*كل شيء داخلها يمكن تحديد مكانه بدقة*/
+                margin-top: 30px;
+                height: 35px; /*30*/
+                width: 100%;
+                
+            }
+             .form .formulaire .input1 input{
+                padding-left: 15px;
+                /* position:absolute;  */
+                padding-right:35px;
+                height: 100%; 
+                width: 100%;
+                border: none;
+                outline: none;
+                border-bottom: 1.5px solid #ccc;
+                border-top: 2px solid transparent;
+                font-size: 15px;
+            } 
+            .input1 i{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #666;
+                font-size: 18px;
+            }
+            .but{
+                padding: 20px;
+                padding-right: 150px;
+                
+            }
+            .bt{
+                
+                border: none;
+                 /*ici*/
+                background-color: #3a32a8;
+                margin-left: 125px;
+                padding: 15px;
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 16px;
+                border-radius: 15px;
+                
+            }
+            
+            .send{
+                color: white;
+            
+         
+            }
+            /* design de footer */
+            footer{
+                background-color: #3a32a8;
+                padding-top: 50px;
+               
+            }
+            .tous{    
+                
+                display: flex;
+                justify-content: center;
+                gap: 300px;
+                /* justify-content: space-between;
+                flex: 1; */
+                margin-right: 50px;
+            }
+             h3{
+                font-size: 22px;
+            }
+            .un{
+                margin-top: 20px;
+                padding: 5px;
+            }
+            .deux{
+                margin-top: 20px;
+                padding-left: 20px;
+            }
+            .trois{
+                margin-top: 20px;
+                padding-right: 30px;
+            }
+            .trois .a{
+                padding: 5px;
+                
+            }
+            .content{
+                margin-left: 2px;
+            }
+            .content .c1{
+                margin-left: 45px;
+            }
+            .b:hover{
+                color: black;
+            }
+            h3:hover{
+                color: black;
+            }
+            #az:hover{
+                color: black;
+            }
+            .b{
+                color: black;
+            }
+            #az{
+                color: black;
+            }
+            .section-cert{
+                margin-top: 65px;
+                margin-bottom: 65px;
+            }
+            .tre{
+                font-size: 65px;
+            }
+            .hero{
+                padding-top: 30px;
+            }
+            /* .cc{
+                margin-top: 10px;
+            } */
+
+            /* designe pour telephone */
+            /* formation-page */
+            /* telephone */
+           @media screen and (max-width:600px) {
+                .marketing-image,
+                .ecommerce-image,
+                .appdev-image,
+                .design-image,
+                .webdev-image {
+                    width: 100%;
+                    height: 280px;
+                    max-width: 300px;
+                    border-radius: 50%;
+                
+            }
+            .page-section h1 {
+                    font-size: 35px;
+                    padding-bottom: 40px;
+                    padding-top: 40px;
+            }
+            .tre{
+                    font-size: 40px !important;
+                    padding-bottom: 40px;
+                    padding-top: 40px;
+            }
+            .form{
+                box-shadow: none;
+            }
+            .tous {
+                flex-direction: column; 
+                gap: 30px; 
+                align-items: center; 
+                margin-right: 0; 
+                padding: 20px 10px; 
+                text-align: center; 
+                margin-left: 0; 
+            }
+            .content {
+                text-align: center; 
+                margin-left: 0; 
+            }
+            .c1{
+                margin-right: 45px;
+            }
+            .deux{
+                margin-right: 25px;
+            }
+            .trois{
+                margin-left: 30px;
+            }
+            /* .hero{
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 5rem 2rem;
+                text-align: left;
+            }
+            .hero-sub {
+                align-items: flex-start;
+                padding-left: 4rem;
+            }
+            .heroing{
+                width: 530px;
+                height: 450px;
+            }
+            .name{
+                font-size: 2rem;
+                padding-left: 0;
+            }
+            .project1, .project2 {
+                font-size: 15px;
+                padding-left: 0;
+            }
+            .title1 {
+                font-size: 30px;
+                padding-left: 0;
+            }
+            .title20{
+                font-size: 70px;
+            }
+            .herobotons{
+                flex-direction: row;
+                max-width: none;
+                justify-content: flex-start;
+                padding-left: 0;
+            } */
+            header {
+                   height: auto;
+                   padding: 10px 0;
+               }
+               
+               .nv {
+                   flex-direction: column;
+                   padding: 10px;
+               }
+               
+               .nv .nav-logo {
+                   padding-left: 20px;
+                   margin-bottom: 10px;
+               }
+               
+               .nv .nav-classes {
+                   flex-direction: column;
+                   width: 100%;
+                   margin-right: 0;
+                   align-items: center;
+               }
+               
+               .nv .nav-classes .nav-link {
+                   margin: 5px 0;
+                   padding: 10px;
+                   width: 90%;
+                   text-align: center;
+               }
+               .nav-logo{
+                margin-right: 40px;
+               }
+               header{
+                position: relative;
+                
+                width: 100%;
+                
+               }
+
+        }
+            @media screen and (max-width:600px) {
+        .but {
+            padding: 20px 0; 
+            display: flex;
+            justify-content: center; /* Centre le bouton */
+        }
+        
+        .bt {
+            margin-left: 0; /* Supprime la marge gauche */
+            width: auto; 
+        }
+        /* ici */
+        .heroing {
+                display: none;
+            }
+            .hero {
+                justify-content: center;
+                text-align: center;
+            }
+            .hero-sub {
+                align-items: center;
+            }
+            .name,
+            .project1,
+            .project2,
+            .title1,
+            .title20 {
+                padding-left: 0;
+            }
+            .herobotons{
+                margin-right: 50px;
+            }
+        }
+                
+                
+           
+            
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new Swiper('.swiper', {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    // Effet de transition douce
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!-- header -->
+        <header>
+            <nav class="nv">
+                 <!-- logo et le titre -->
+                  <div class="nav-logo">
+                     <img src="https://th.bing.com/th/id/OIP.ANiIaXqbGdHY1EfYJUvnuAHaHa?rs=1&amp;pid=ImgDetMain" alt="logo" class="logo">
+                     <a href="#" class="titre"><h2>SkillUP</h2></a> 
+                 </div>
+                 <!-- entrer le non er source image -->
+                 <ul class="nav-classes">
+                     <li><a href="#section1" class="nav-link">Home</a></li>
+                     <li><a href="#section2" class="nav-link">Trainning</a></li>
+                     <li><a href="#section3" class="nav-link">Inscription</a></li>   
+                     <li><a href="#section4" class="nav-link">contact us</a></li> 
+                 </ul>
+            </nav>
+         </header>
+         <!-- main page -->
+         <main>
+            <!-- home section -->
+            <section id="section1" class="hero">
+                <div class="hero-sub">
+                    <h3 class="name">welcome to Our</h3> 
+                    <h1 class="title20">SkillUP</h1>
+                    <h2 class="title1">training center</h2>
+                    <p class="project1">Are you ready to take control of your career and future?</p>
+                    <p class="project2">At SkillUp Center, we believe that everyone has the power </p>
+                    <p class="project2">to grow, create, and succeed ,all they need is the right guidance and tools.</p>
+                    <div class="herobotons">
+                        <a id="cc" class="contact" href="#section4">contact us</a>
+                        <a id="cc" class="inscr" href="#section3">inscription</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://i.pinimg.com/736x/ac/0f/c5/ac0fc5c695fb332f4df40e40ab1508df.jpg" alt="image" class="heroing"/> 
+                </div>   
+            </section>
+
+        <!-- certicates page -->
+        <section class="section-cert">
+                    <h1 class="tre">Testimonials</h1>
+        
+        <!-- Slider principal - structure simplifiée -->
+        <div class="swiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+            <div class="swiper-wrapper" id="swiper-wrapper-86bd1223196b9298" aria-live="off" style="transition-duration: 0ms; transition-delay: 0ms;">
+                
+                
+            <div class="swiper-slide swiper-slide-next" role="group" aria-label="4 / 5" data-swiper-slide-index="3" style="width: 681px; opacity: 0; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="https://th.bing.com/th/id/OIP.Mjt18GQ0gvpaF9AX5RlbrgHaLu" alt="Student">
+                    <h3>Mouna Samiv</h3>
+                    <p>"The career coaching sessions were a game-changer. I updated my resume, aced interviews, and landed a 30% salary increase!"</p>
+                </div><div class="swiper-slide" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="width: 681px; opacity: 0; transform: translate3d(-681px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="https://img.freepik.com/photos-gratuite/hipster-homme-cheveux-s-barbu_1303-1879.jpg" alt="Student">
+                    <h3>Hani Bidin</h3>
+                    <p>"I was intimidated at first, but the step-by-step lessons made everything click. Now I can build websites from scratch!"</p>
+                </div><div class="swiper-slide" role="group" aria-label="1 / 5" data-swiper-slide-index="0" style="width: 681px; opacity: 0; transform: translate3d(-1362px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="https://th.bing.com/th/id/OIP.jlzOYk82Yz5NY8QTLUGuQwHaE8" alt="Student">
+                    <h3>Mounir Bouni</h3>
+                    <p>"This course transformed my coding skills! The hands-on projects helped me land my first job as a web developer."</p>
+                </div><div class="swiper-slide swiper-slide-prev" role="group" aria-label="2 / 5" data-swiper-slide-index="1" style="width: 681px; opacity: 0; transform: translate3d(-2043px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="https://th.bing.com/th/id/OIP.kSZxuUgqLxFLEXS8lh1jGQHaHD" alt="Student">
+                    <h3>Manel Berzi</h3>
+                    <p>"The instructor's feedback was so detailed—I improved my portfolio and got hired as a UX designer within 3 months!"</p>
+                </div><div class="swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" role="group" aria-label="3 / 5" data-swiper-slide-index="2" style="width: 681px; opacity: 1; transform: translate3d(-2724px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="https://www.masculin.com/wp-content/uploads/sites/2/2022/09/mode-homme-automne-2022-scaled.jpg" alt="Student">
+                    <h3>Adem Miki</h3>
+                    <p>"This program didn't just teach me skills—it got me hired! I went from zero coding experience to a full-time developer."</p>
+                </div></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 3" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span></div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-86bd1223196b9298"></div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-86bd1223196b9298"></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    
+        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new Swiper('.swiper', {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    // Effet de transition douce
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                });
+            });
+        </script> -->
+
+                </section>
+                <!--  -->
+             <!-- fromations sections -->
+            <section id="section2">
+                <section id="marketing" class="page-section">
+                    <center>
+                        <h1 class="train">OUR TRAINNINGS</h1>
+                    </center>
+                  <div class="course-detail">
+                    <center>
+                    <h2 class="tri">Marketing Course</h2>
+                    <!-- <p>Master digital marketing strategies, SEO, and social media campaigns.</p>-->
+                    <p class="desc">You want to enter the world of promotion and win the largest number of consumers in the shortest period.This is the right place.Our course opens the door for you to the world of professional promotion</p>
+                    </center>
+                    <center>
+                    <img class="marketing-image" src="https://image.freepik.com/free-photo/marketing-department_53876-87308.jpg" alt="marketing-image">
+                    </center>
+                    <center>
+                    <div class="price-offer">Limited Offer: 30% OFF - Enroll Now!</div>
+                    
+                    <a href="mailto:contact@learnify.com?subject=Marketing Course Enrollment" class="btn">Enroll Now</a>
+                   </center>
+                </div>
+                 
+                </section>
+              
+                <section id="ecommerce" class="page-section">
+                  <div class="course-detail">
+                    <center>
+                    <h2 class="tri">E-Commerce Course</h2>
+                    <p class="desc">E-commerce is a world full of challenges and competition.Our course allows you to reach the top and achieve great profits.Do not hesitate, places are limited</p>
+                    </center>
+                    <center>
+                    <img class="ecommerce-image" src="https://f.hellowork.com/blogdumoderateur/2020/12/Formation-E-Commerce-664x443.jpg" alt="">
+                    <div class="price-offer">Special Discount: Save 25% Today!</div>
+                    <a href="mailto:contact@learnify.com?subject=E-Commerce Course Enrollment" class="btn">Enroll Now</a>
+                    </center>
+                </div>
+                </section>
+              
+                <section id="appdev" class="page-section">
+                  <div class="course-detail">
+                    <center>
+                    <h2 class="tri">App Development Course</h2>
+                    <p class="desc">You want to program applications and profit from them.Our course provides you with theoretical and applied education, which makes it easier for you to become a professional in this field.Join us and do not hesitate</p>
+                    <img class="appdev-image" src="https://cdn.mos.cms.futurecdn.net/3eSHhTo4WUYwXJUpMCxEUo-970-80.jpg" alt="appdev-image">
+                    <div class="price-offer">Spring Promo: Enroll and Get 20% OFF!</div>
+                    <a href="mailto:contact@learnify.com?subject=App Development Course Enrollment" class="btn">Enroll Now</a>
+                  </center>
+                </div>
+                </section>
+              
+                <section id="design" class="page-section">
+                  <div class="course-detail">
+                    <center>
+                    <h2 class="tri">Design Course</h2>
+                    <p class="desc">You love beauty and the world of colors.The design course is specially for you.Through our course, you will learn the basics of design, its methods, and how to make profits through it.Do not miss the opportunity</p>
+                    <img class="design-image" src="https://f.maformation.fr/edito/sites/3/2021/07/graphisme.jpeg" alt="">
+                    <div class="price-offer">Design Week: 40% OFF for a Limited Time!</div>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn">Enroll Now</a>
+                    </center>
+                  </div>
+                </section>
+              
+                <section id="webdev" class="page-section">
+                  <div class="course-detail">
+                    <center>
+                    <h2 class="tri">Web Development Course</h2>
+                    <p class="desc">You want to program web-applications "front-end and back-end" and profit from them.Our course provides you with theoretical and applied education, which makes it easier for you to become a professional in this field.Join us and do not hesitate</p>
+                    <img class="webdev-image" src="https://i0.wp.com/orthomasterclass.com/wp-content/uploads/2021/07/the-art-of-coding-in-digital-orthodontics.jpg?w=1280&ssl=1" alt="web-dev-image">
+                    <div class="price-offer">Full-Stack Special: Join Now and Save 35%</div>
+                    <a href="mailto:contact@learnify.com?subject=Web Development Course Enrollment" class="btn">Enroll Now</a>
+                    </center>
+                  </div>
+                </section>
+                </section>
+                <!-- INSCRIPTION PAGE -->
+                <section id="section3">
+                    <center>
+                    <div class="form">
+                        <div>
+                            <center>
+                           <form class="formulaire"> 
+                                <span class="title">inscription</span>
+                                <div class="input1">
+                                    <input type="text" name="firstname" id="firstname" placeholder="First name" maxlength="15">
+                                    <i class="uil uil-users-alt"></i>
+                                    <br>
+                                </div>
+                                <div class="input1">
+                                    <input type="text" name="surname" id="surname" placeholder="Surname" maxlength="15">
+                                    <i class="uil uil-user"></i>
+                                    <br>
+                                </div>
+                                <div class="input1">
+                                    <input type="tel" name="Number" id="number" placeholder="Phone Number">
+                                    <i class="uil uil-phone"></i>
+                                    <br>
+                                </div>
+                                <div class="input1">
+                                    <input type="email" name="email" id="email" placeholder="Email">
+                                    <i class="uil uil-envelope"></i>
+                                    <br>
+                                </div>
+                                <div class="input1">
+                                    <input type="text" name="Training" id="training" placeholder="Training">
+                                    <i class="uil uil-book"></i>
+                                    <br>
+                                </div> 
+                                <div class="input1">
+                                    <input type="number" name="price" id="price" placeholder="Price Of Training">
+                                    <i class="uil uil-dollar-sign-alt"></i>
+                                    <br>
+                                </div>
+                                <center>
+                                <div class="but">
+                                    <button class="bt"><a href="" class="send">send</a></button> 
+                                    <!-- ajouter href -->
+                                </div>
+                                </center>
+                           </form>
+                           </center>
+                        </div>   
+                        </div>
+                        </center>
+                </section>
+         </main>
+         <!-- footer page -->
+         <footer id="section4">
+            <div class="tous">
+                <div class="content">
+                    <h3 class="c1">Contact us</h3>
+                    <div class="un">
+                        <p class="b">Adress:bab-zouar 200 street</p>
+                        <br>
+                        <p class="b">Phone number:0770564382</p>
+                        <br>
+                        <p class="b">Email:Skillup@gmail.com</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class="c2">Page links</h3>
+                    <div class="deux">
+                        <a href="#section1"><p id="ba" class="b">Home</p></a>
+                        <br>
+                        <a href="#section2"><p id="ba" class="b">Trainning</p></a>
+                        <br>
+                        <a href="#section3"><p id="ba" class="b">Inscription</p></a>
+                        <br>
+                        <a href="#section4"><p id="ba" class="b">contact us</p></a>
+                        <br>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class="c3">Follow us</h3>
+                    <!-- icons or images -->
+                     <div class="trois">
+                        <a href="#" class="a"><i id="az" class="uil uil-facebook"></i></a>
+                        <a href="#" class="a"><i id="az" class="uil uil-twitter-alt"></i></a>
+                        <a href="#" class="a"><i id="az" class="uil uil-instagram-alt"></i></a>
+                        <a href="#" class="a"><i id="az" class="uil uil-linkedin"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="fin">
+                <center><p id="az">© 2025 Learnify. Empowering your digital journey.</p></center>
+            </div>
+        </footer>
+         
+    </body>
+</html>
